@@ -13,13 +13,13 @@ const placeholderImage2 = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//g
 let counter = 0;
 
 const getFromApi = async () => {
-  fetchMock.mock('', {
-    image: (counter++) % 2 === 0 ? placeholderImage : placeholderImage2
-  });
+  // fetchMock.mock('', {
+  //   image: (counter++) % 2 === 0 ? placeholderImage : placeholderImage2
+  // });
 
   const response = await fetch(apiUrl);
 
-  fetchMock.restore();
+  // fetchMock.restore();
 
   return await response.json();
 }
